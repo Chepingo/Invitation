@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a la Fiesta</title>
+    <style>
+        /* CSS Básico para que se vea bien */
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .invitacion-card {
+            background-color: #2b2b2b;
+            border: 2px solid #fca311;
+            border-radius: 15px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(252, 163, 17, 0.2);
+        }
+        .video-container {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e8495f; /* Color rojo del video */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: #e5e5e5;
+        }
+        input, select {
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #555;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+        }
+        button {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            background-color: #fca311; /* Color amarillo/naranja */
+            color: #1a1a1a;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ffc300;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitacion-card">
+        <div class="video-container">
+            🎉 ¡Estás Invitado! 🎉
+        </div>
+        
+        <form name="confirmacion-fiesta" method="POST" data-netlify="true">
+            
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="confirmacion">Confirma tu asistencia:</label>
+            <select id="confirmacion" name="confirmacion" required>
+                <option value="Si">Sí, ¡ahí estaré!</option>
+                <option value="No se">No estoy seguro aún</option>
+                <option value="No">No podré asistir</option>
+            </select>
+            
+            <button type="submit">Enviar Confirmación</button>
+            
+        </form>
+        </div>
+
+</body>
+</html>
